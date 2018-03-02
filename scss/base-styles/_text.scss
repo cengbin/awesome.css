@@ -1,0 +1,16 @@
+@mixin txt-base($fs,$ff,$color,$l-h:0){
+  font-size:$fs;
+  font-family:$ff;
+  color: $color;
+  @if $l-h !=0{
+    line-height:$l-h;
+  }
+}
+
+//SCSS占位符 如果有extend这生产css代码，否者不生产
+%fw-lighter{
+  font-weight:lighter;
+}
+%fw-bold{
+  font-weight:bold;
+}

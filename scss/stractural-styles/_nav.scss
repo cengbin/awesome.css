@@ -1,0 +1,169 @@
+@mixin pst($p,$l:false,$t:false,$z:false){
+  position:$p;
+  @if $l{
+    left:$l;
+  }
+  @if $t{
+    top:$t;
+  }
+  @if $z{
+    z-index:$z;
+  }
+}
+.gn-noscroll,.gn-noscroll body{
+  overflow: hidden !important;
+  height: 100% !important;
+}
+
+.gn-longhash{
+  display: inline-block;
+}
+
+.global-nav{
+  padding:27px 0;
+
+  .gn-link-search{
+    display: inline-block;
+    width: 18px;
+    height: auto;
+  }
+}
+
+.gn-header{
+  position:relative;
+  display: none;
+  text-align: center;
+
+  .gn-search{
+    @include pst(absolute);
+    top:0;
+    right:17px;
+  }
+}
+
+.gn-menuicon{
+  cursor: pointer;
+  position:absolute;
+  left:17px;
+  top:8px;
+  z-index:0;
+  .menuicon-bar{
+    display: block;
+    width: 19px;
+    height: 2px;
+    margin-top: 6px;
+    background-color:#cb2f82;
+    &:first-child{
+      margin-top:0;
+    }
+  }
+}
+
+.gn-list{
+  .gn-item{
+    float: right;
+    .item{
+      display: inline-block;
+      margin-right:30px;
+
+      &:last-child{
+        margin-right:0;
+      }
+
+      a{
+        @include txt-base(15px,$ff-base,#1e1e1e);
+      }
+    }
+  }
+}
+
+.gn-menuicon-bread{
+  @include pst(absolute,20px,(47px/2));
+  display: none;
+  width:23px;
+  height:23px;
+  cursor: pointer;
+  .menuicon-bar{
+    @include pst(absolute,0,10px);
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color:#cb2f82;
+
+    @include css3(transform,center center);
+
+    &:first-child{
+      @include css3(transform,rotate(-225deg));
+    }
+    &:last-child{
+      @include css3(transform,rotate(-135deg));
+    }
+  }
+}
+
+.language{
+  li{
+    display: inline-block;
+    padding:0 10px;
+    border-right:1px solid #afafaf;
+    font-size:12px;
+
+    &:first-child{
+      padding-left:0;
+    }
+    &:last-child{
+      padding-right:0;
+      border-right:0;
+    }
+  }
+
+  .cur{
+    color:#cb2f82;
+  }
+}
+
+@media (max-width:768px){
+  .gn-header{
+    display: block;
+  }
+  .gn-list{
+    @include pst(absolute,0,0,99);
+    display: none;
+    width:100%;
+    height:100%;
+    background-color: rgba(255,255,255,0.95);
+
+    .gn-longhash{
+      display: block;
+      background-color:white;
+      line-height: 78px;
+      text-align: center;
+    }
+    .gn-item{
+      float: none;
+      margin:0 40px;
+      .item{
+        display: block;
+        margin-right:0;
+        border-bottom:1px solid #afafaf;
+        line-height:(87px/2);
+      }
+      .gn-search{
+        display: none;
+      }
+    }
+  }
+
+  .gn-menuicon-bread{
+    display: block;
+  }
+
+  .language{
+    li{
+      display: block;
+      padding-left:30px !important;
+      border-right:0;
+      line-height:3;
+    }
+  }
+}

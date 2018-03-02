@@ -1,0 +1,64 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  padding:0;
+  margin:0;
+
+  font-family: $ff-base;
+  font-size: 16px;
+  background-color:#fff;
+
+  -webkit-tap-highlight-color:transparent;
+  tap-highlight-color:transparent;
+}
+
+article,
+footer,
+header,
+main,
+menu,
+nav,
+section{
+  display: block;
+}
+
+h1,h2,h3,h4,h5,h6,ul,li,p{
+  margin:0;
+  padding:0;
+}
+
+a {
+  text-decoration: none;/*超链接无下划线*/
+  background-color: transparent;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    outline: 0;
+  }
+  &:focus {
+    outline:0;
+  }
+}
+
+ul,li{
+  list-style-type:none;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}

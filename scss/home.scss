@@ -1,0 +1,14 @@
+@import "_bin.scss";
+
+/*影藏Browsersync刷新网页默认提示文字*/
+#__bs_notify__{
+  display: none !important;
+}
+
+.noscroll,.noscroll body{
+  overflow: hidden !important;
+  height: 100% !important;
+}
+
+
+

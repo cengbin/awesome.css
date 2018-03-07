@@ -54,41 +54,73 @@
   .data{
     @include txt-base(16px,$ff-base,$purple-dark,(60em/16));
   }
+  .line{
+    width: 47px;
+    height: 1px;
+    background-color: $purple-light;
+  }
   .new-title{
     margin-top: (27em/22);
     @include txt-base(22px,$ff-base,$purple-dark,1.2em);
   }
+
+  .new-des,.more{
+    @include txt-base(18px,$ff-base,#1e1e1e);
+  }
+
   .new-des{
     margin-top:.5em;
     margin-bottom:1em;
-    @include txt-base(18px,$ff-base,#1e1e1e,1.2em);
+    line-height: 1.2em;
   }
+
   .more{
-    @include txt-base(18px,$ff-base,#1e1e1e);
     font-weight:bold;
   }
+
   .da-des{
     @include txt-base(18px,$ff-base,#1e1e1e);
     font-weight:bold;
     @extend .text-center;
   }
+
+
 }
 
 
 @media (max-width:768px){
-  .thumbnail{
-    margin-bottom:30px;
+  .new-thumbnail{
+    padding:0 50px;
   }
-  .caption {
-    padding-left:(40px/2);
-    padding-right:(40px/2);
-    h3{
-      padding: 15px 0 15px 0;
+
+  .caption{
+    text-align: center;
+    padding-bottom: 60px;
+    .num{
+      font-size: 13px;
     }
-  }
-  .caption-right{
-    h3{
-      padding:15px 0 12px 0;
+
+    .data{
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .line{
+      position: absolute;
+      left: 50%;
+      bottom: 60px;
+      margin-left: -23px;
+    }
+
+    .more{
+      display: none;
+    }
+
+    .new-title{
+      margin-top:0;
+      font-size: 18px;
     }
   }
 }

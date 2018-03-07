@@ -1,0 +1,23 @@
+//基础
+@import "mixins/variables";
+@import "mixins/mixin";
+@import "mixins/functions";
+
+//重制样式，保持浏览器样式统一
+@import "normalizing-styles/normalize.scss";
+
+//基础样式
+@import "base-styles/text.scss";
+
+//功能样式
+@import "utility-styles/utility.scss";
+@import "utility-styles/responsive-utilities.scss";
+
+//机构样式
+@import "stractural-styles/grid-framework.scss";
+
+//组件
+@import "component-styles/buttons.scss";
+
+//浏览器向下兼容布丁
+@import "bowser-specific-styles/ie8.css";

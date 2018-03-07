@@ -6,8 +6,9 @@
   background-color:#f6f6f6;
   border-top:1px solid  #e1dddf;
 
-  .longhas{
-
+  .gf-longhas-txt{
+    font-size: (11px);
+    color: #878787;
   }
 
   .nav-title{
@@ -37,7 +38,23 @@
 
 @media (max-width:768px){
   .global-footer{
-    padding:0 34px 56px;
+    padding:0 34px (160px/2);
+
+    .gf-longhas{
+      position: absolute;
+      bottom:20px;
+      left:0;
+      width: 100%;
+      padding:0 34px;
+    }
+    .gf-longhas-logo{
+      img{
+        width: 55px;
+      }
+    }
+    .gf-longhas-txt{
+      font-size: (16px/2);
+    }
 
     .nav-list{
       border-bottom:1px solid #e1dddf;
@@ -68,8 +85,5 @@
       font-size:10px;
     }
 
-    .copyright{
-
-    }
   }
 }

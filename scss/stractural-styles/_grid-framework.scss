@@ -2,7 +2,7 @@
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  overflow-x: hidden;
+  //overflow-x: hidden;
 }
 
 // Minimum breakpoint width. Null for the smallest (first) breakpoint.
@@ -16,6 +16,31 @@
 
 @mixin make-col($i,$columns){
   width: percentage($i/$columns);
+}
+
+@mixin make-float($key,$columns){
+
+
+  %grid-xs-col-left{
+    float: left;
+  }
+  %grid-sm-col-left{
+    float: left;
+  }
+  %grid-md-col-left{
+    float: left;
+  }
+  %grid-lg-col-left{
+    float: left;
+  }
+
+
+  @for $i from 1 through $columns{
+    .col-#{$key}-#{$i}{
+
+      @extend %grid-#{$key}-col-left;
+    }
+  }
 }
 
 @mixin make-col-offset($size, $columns: $grid-columns) {
@@ -43,12 +68,13 @@
   %grid-col{
     position:relative;
     min-height:1px;
-    float:left;
+    //float:left;
   }
   @each $key,$value in $breakpoints{
     //@debug $key,$value;
 
     //制作列公有的属性
+    //此处有问题！！！如果有col-sm-1的类，在移动端不应该看到col-sm-1类的属性。
     @for $i from 1 through $columns{
       .col-#{$key}-#{$i}{
         @extend %grid-col;
@@ -61,6 +87,10 @@
       @for $i from 1 through $columns{
         .col-#{$key}-#{$i}{
           @include make-col($i,$columns);
+
+          //制作浮动，此处写法不好 待优化！！！(@media 里面不可以嵌套 @extend 占位符）
+          //应该把float:left;提出去。
+          float: left;
         }
       }
 
@@ -70,6 +100,7 @@
           @include make-col-offset($i,$columns);
         }
       }
+
     }
   }
 }

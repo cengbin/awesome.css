@@ -28,14 +28,18 @@ $screen-lg-min:map_get($grid-breakpoints,lg);
 $grid-columns:12;
 
 //字体，英文先使用Avenir，中文使用Arail
-$YaHei:'Microsoft YaHei';
-$ff-base:$YaHei,Arail,sans-serif;
+$ff-base:'Microsoft YaHei',Arail,sans-serif;
 $ff-l:Avenir-Light,Arail,sans-serif;
+$ff-md:Avenir-Light,Arail,sans-serif;
 $ff-h:Avenir-Heavy,Arail,sans-serif;
 
 @font-face {
   font-family:'Avenir-Light';
-  src:url($font-path + 'Avenir-Light.otf');
+  src:url($font-path + 'AvenirLTStd-Light.otf');
+}
+@font-face {
+  font-family:'Avenir-Medium';
+  src:url($font-path + 'AvenirLTStd-Medium.otf');
 }
 @font-face{
   font-family:'Avenir-Heavy';

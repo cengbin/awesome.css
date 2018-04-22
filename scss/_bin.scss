@@ -1,23 +1,22 @@
-//基础
-@import "mixins/variables";
-@import "mixins/mixin";
-@import "mixins/functions";
+//sass 声明
+@import "mixins/variables.scss";
+@import "mixins/mixin.scss";
+@import "mixins/functions.scss";
 
-//重制样式，保持浏览器样式统一
+//通用样式：消除浏览器不一致性
 @import "normalizing-styles/normalize.scss";
 
-//基础样式
+//基础样式：为网站的所有元素提供基本的样式
 @import "base-styles/text.scss";
 
-//功能样式
-@import "utility-styles/utility.scss";
-@import "utility-styles/responsive-utilities.scss";
+//组件及其容器的样式
+@import "component-styles/orientation-tip.scss";
 
-//机构样式
+//结构化样式：包括组件节气容器的样式。例如创建网页的布局，并常用于定义尺寸
 @import "stractural-styles/grid-framework.scss";
 
-//组件
-@import "component-styles/buttons.scss";
+//功能样式：所有样式中最精确的样式。为满足单一目的而实现的样式也属于该类。
+@import "utility-styles/utility.scss";
 
-//浏览器向下兼容布丁
-@import "bowser-specific-styles/ie8.css";
+//浏览器特定样式
+//@import "bowser-specific-styles/_ie8.scss";

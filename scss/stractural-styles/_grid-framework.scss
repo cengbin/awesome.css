@@ -20,7 +20,6 @@
 
 @mixin make-float($key,$columns){
 
-
   %grid-xs-col-left{
     float: left;
   }
@@ -33,7 +32,6 @@
   %grid-lg-col-left{
     float: left;
   }
-
 
   @for $i from 1 through $columns{
     .col-#{$key}-#{$i}{
@@ -108,4 +106,5 @@
 .container {
   @include make-container;
 }
+
 @include make-grid-columns();

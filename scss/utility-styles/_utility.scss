@@ -1,19 +1,16 @@
+//清除浮动
 .clearfix:before,
 .clearfix:after,
-.container:before,
-.container:after,
 .row:before,
-.row:after,
-.nav:before,
-.nav:after {
+.row:after{
   content: " ";
   display: table;
-}
-.clearfix:after,
-.container:after,
-.row:after,
-.nav:after {
   clear: both;
+}
+
+//影藏Browsersync刷新网页默认提示文字
+#__bs_notify__{
+  display: none !important;
 }
 
 //省略号代替被截断的文本。元素必须是 block 或 inline-block 级。
@@ -23,6 +20,7 @@
   white-space: nowrap;
 }
 
+//元素左右居中
 .center-block {
   display: block;
   margin-left: auto;
@@ -51,4 +49,15 @@
 }
 .show {
   display: block !important;
+}
+
+//禁止页面滚动
+.noscroll,.noscroll body{
+  overflow: hidden !important;
+}
+
+//禁止页面滚动，并强制显示到页面顶部
+html.noscroll2,html.noscroll2 body{
+  overflow: hidden !important;
+  height: 100% !important;
 }

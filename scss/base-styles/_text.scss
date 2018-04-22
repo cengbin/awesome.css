@@ -14,3 +14,22 @@
 %fw-bold{
   font-weight:bold;
 }
+
+//字体，英文先使用Avenir，中文使用Arail
+$ff-base:'Microsoft YaHei',Arail,sans-serif;
+$ff-l:Avenir-Light,Arail,sans-serif;
+$ff-md:Avenir-Light,Arail,sans-serif;
+$ff-h:Avenir-Heavy,Arail,sans-serif;
+
+@font-face {
+  font-family:'Avenir-Light';
+  src:url($font-path + 'AvenirLTStd-Light.otf');
+}
+@font-face {
+  font-family:'Avenir-Medium';
+  src:url($font-path + 'AvenirLTStd-Medium.otf');
+}
+@font-face{
+  font-family:'Avenir-Heavy';
+  src:url($font-path + 'AvenirLTStd-Heavy.otf');
+}

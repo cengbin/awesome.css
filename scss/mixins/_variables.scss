@@ -6,23 +6,23 @@ $colors:(
   purple-dark:#402f5d,
   black-lh:#1e1e1e
 );
-//颜色值
+// 颜色值
 $purple-light:map_get($colors,purple-light);
 $purple-dark:map_get($colors,purple-dark);
 $black-lh:map_get($colors,black-lh);
 
 // Grid breakpoints
-//网格断点
-//适应不同的屏幕尺寸,用于媒体查询。
+// 网格断点,适应不同的屏幕尺寸,用于媒体查询。
 $grid-breakpoints: (
   xs: 0,//超小屏幕 手机 (<768px)
   sm: 768px,//小屏幕（平板，大于等于 768px）
   md: 992px,//中等屏幕（桌面显示器，大于等于 992px）
   lg: 1200px//大屏幕（大桌面显示器，大于等于 1200px）
 ) !default;
-$screen-xs-min:map_get($grid-breakpoints,xs);
-$screen-sm-min:map_get($grid-breakpoints,sm);
-$screen-md-min:map_get($grid-breakpoints,md);
-$screen-lg-min:map_get($grid-breakpoints,lg);
+$screen-xs:map_get($grid-breakpoints,xs);
+$screen-sm:map_get($grid-breakpoints,sm);
+$screen-md:map_get($grid-breakpoints,md);
+$screen-lg:map_get($grid-breakpoints,lg);
 
+// 网格列数
 $grid-columns:12;

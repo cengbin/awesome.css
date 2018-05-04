@@ -1,11 +1,7 @@
 //清除浮动
-.clearfix:before,
-.clearfix:after,
-.row:before,
-.row:after{
-  content: " ";
-  display: table;
-  clear: both;
+.clearfix,
+.row{
+  @include clearfix();
 }
 
 //影藏Browsersync刷新网页默认提示文字
@@ -15,16 +11,12 @@
 
 //省略号代替被截断的文本。元素必须是 block 或 inline-block 级。
 .text-overflow{
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  @include text-overflow();
 }
 
 //元素左右居中
 .center-block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  @include center-block();
 }
 
 .text-left {

@@ -1,0 +1,25 @@
+// Core variables and mixins
+@import "variables";
+@import "mixins";
+
+//通用样式：消除浏览器不一致性
+@import "normalizing-styles/normalize.scss";
+
+//基础样式：为网站的所有元素提供基本的样式
+@import "base-styles/text.scss";
+
+//组件及其容器的样式
+@import "component-styles/buttons.scss";
+@import "component-styles/forms.scss";
+@import "component-styles/carousel.scss";
+
+//结构化样式：包括组件节气容器的样式。例如创建网页的布局，并常用于定义尺寸
+@import "stractural-styles/grid.scss";
+
+//功能样式：所有样式中最精确的样式。为满足单一目的而实现的样式也属于该类。
+@import "utility-styles/responsive-utilities.scss";
+@import "utility-styles/utility.scss";
+@import "utility-styles/animate.scss";
+
+//浏览器特定样式
+//@import "bowser-specific-styles/_ie8.scss";

@@ -1,0 +1,25 @@
+//解决当网站的内容不足以撑满整个页面的时候，footer自动贴底部。
+$footer-height:400px;
+$mfooter-height:200px;
+
+html,body{
+  height:100%;
+}
+
+//文档内容，不同页面主文档的内边距在不同页面设置
+.main{
+  min-height:100%;
+  padding-bottom: $footer-height;//不能使用margin-bottom，参考box-sizing属性
+}
+.footer{
+  margin-top:-$footer-height;
+}
+
+@media (max-width:768px){
+  .main{
+    padding-bottom:$mfooter-height;
+  }
+  .footer{
+    margin-top:-$mfooter-height;
+  }
+}

@@ -1,0 +1,14 @@
+.global-footer{
+  position:relative;
+  width:100%;
+  padding-top:66px;
+  padding-bottom:90px;
+  background-color:#f6f6f6;
+  border-top:1px solid  #e1dddf;
+}
+
+@media (max-width:768px){
+  .global-footer{
+    padding:0 34px (160px/2);
+  }
+}

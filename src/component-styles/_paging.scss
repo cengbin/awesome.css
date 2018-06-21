@@ -1,0 +1,33 @@
+.paging{
+  display: inline-block;
+  color: #cb2f82;
+  font-size: 20px;
+
+  .prev,.next,.paging-num,.paging-num li{
+    cursor: pointer;
+    display: inline-block;
+  }
+  .prev,.next{
+    width: (18em/20);
+    img{
+      vertical-align: middle;
+      margin-top:-.25em;
+    }
+  }
+  .paging-num{
+    margin:0 10px;
+
+    li{
+      margin:0 5px;
+    }
+    .active{
+      color: red;
+    }
+  }
+}
+
+@media (max-width:768px){
+  .paging{
+    font-size: 16px;
+  }
+}

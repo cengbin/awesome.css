@@ -1,0 +1,126 @@
+/*缩略图*/
+.new-thumbnail{
+
+  .nt-head{
+    overflow: hidden;
+  }
+
+  .lazy{
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+
+    -webkit-transition:all ease-out 1s;
+    transition:all ease-out 1s;
+  }
+
+  .sub-title{
+
+  }
+
+}
+/*缩略图划入效果*/
+.thumbnail-hover:hover{
+
+  .lazy{
+    -webkit-transform:scale(1.03,1.03);
+    transform:scale(1.03,1.03);
+  }
+
+}
+
+.decoration{
+  position:relative;
+
+  &:after{
+    content:'';
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color:black;
+    opacity:.6;
+    -webkit-transition:opacity 0.3s;
+    -moz-transition:opacity 0.3s;
+    transition:opacity 0.3s;
+  }
+}
+
+.caption{
+
+  .num{
+    @include txt-base(18px,$ff-base,$purple-light,(54em/18));
+  }
+  .data{
+    @include txt-base(16px,$ff-base,$purple-dark,(60em/16));
+  }
+  .line{
+    width: 47px;
+    height: 1px;
+    background-color: $purple-light;
+  }
+  .new-title{
+    margin-top: (27em/22);
+    @include txt-base(22px,$ff-base,$purple-dark,1.2em);
+  }
+
+  .new-des,.more{
+    @include txt-base(18px,$ff-base,#1e1e1e);
+  }
+
+  .new-des{
+    margin-top:.5em;
+    margin-bottom:1em;
+    line-height: 1.2em;
+  }
+
+  .more{
+    font-weight:bold;
+  }
+
+  .da-des{
+    @include txt-base(18px,$ff-base,#1e1e1e);
+    font-weight:bold;
+    @extend .text-center;
+  }
+
+
+}
+
+
+@media (max-width:768px){
+  .new-thumbnail{
+    padding:0 50px;
+  }
+
+  .caption{
+    text-align: center;
+    padding-bottom: 60px;
+    .num{
+      font-size: 13px;
+    }
+
+    .data{
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .line{
+      position: absolute;
+      left: 50%;
+      bottom: 60px;
+      margin-left: -23px;
+    }
+
+    .more{
+      display: none;
+    }
+
+    .new-title{
+      margin-top:0;
+      font-size: 18px;
+    }
+  }
+}

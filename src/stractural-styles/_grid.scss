@@ -1,0 +1,57 @@
+//
+// Grid system
+// --------------------------------------------------
+
+// Container widths
+.container {
+  overflow:hidden;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width:$screen-sm){
+    width:$screen-sm;
+  }
+  @media (min-width:$screen-md){
+    width:$screen-md;
+  }
+  @media (min-width:$screen-lg){
+    width:$screen-lg;
+  }
+}
+
+// Row
+// Rows contain and clear the floats of your columns.
+.row {
+  @include clearfix();
+}
+
+// Columns
+// Common styles for small and large grid columns
+
+// Extra small grid
+@include make-grid(xs);
+
+// Small grid
+@media (min-width: $screen-sm) {
+  @include make-grid(sm);
+}
+@media (min-width:$screen-sm){
+  .col-w-125{
+    position:relative;
+    float:left;
+    width:12.5%;
+    &:nth-child(8n+1){
+      clear:both;
+    }
+  }
+}
+
+// Medium grid
+@media (min-width: $screen-md) {
+  @include make-grid(md);
+}
+
+// Large grid
+@media (min-width: $screen-lg) {
+  @include make-grid(lg);
+}

@@ -1,0 +1,17 @@
+%fw-lighter{
+  font-weight:lighter;
+}
+%fw-bold{
+  font-weight:bold;
+}
+
+@mixin text($fs,$ff,$color,$l-h:0){
+  font-size:$fs;
+  font-family:$ff;
+  color: $color;
+  @if $l-h !=0{
+    line-height:$l-h;
+  }
+}
+
+

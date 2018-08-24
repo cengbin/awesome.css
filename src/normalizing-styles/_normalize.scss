@@ -1,6 +1,4 @@
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -8,7 +6,7 @@ body {
   padding:0;
   margin:0;
 
-  //font-family: $ff-base;
+  font-family: Avenir,sans-serif;
   font-size: 16px;
   background-color:#fff;
 
@@ -43,6 +41,9 @@ input[type="submit"] {
 }
 
 //******************
+button{
+  outline:0;
+}
 
 hr{
   height: 0;

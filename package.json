@@ -1,0 +1,26 @@
+{
+  "name": "web-css-library",
+  "version": "1.0.0",
+  "description": "> SCSS构建的轻量级css UI库",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"stylus src -o dist/bin.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/urlzengbin/web-CSS-library.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/urlzengbin/web-CSS-library/issues"
+  },
+  "homepage": "https://github.com/urlzengbin/web-CSS-library#readme",
+  "dependencies": {
+    "stylus": "^0.54.5"
+  }
+}

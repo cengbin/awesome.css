@@ -1,0 +1,27 @@
+// 混合书写(Mixins)
+test()
+  // arguments 内置局部变量，包含多个实参的引用
+  // p函数 (输出日志到控制台)
+  p(arguments)
+
+  //
+  for prop,i in arguments
+    // 条件判断 (if后面的条件语句不需要加小括号)
+    if prop != null
+      if i == 0
+        left:prop
+      else if i == 1
+        top:prop
+      else if i == 2
+        right:prop
+      else if i == 3
+        bottom:prop
+
+// 声明一个变量（相当于一个对象{one:1,two:2,three:3}
+list = (one 1) (two 2) (three 3)
+
+apply(props)
+  // 当if右边表达式为真的时候执行左边的操作对象。
+  props = arguments if length(arguments) > 1
+  for prop in props
+    {prop[0]} prop[1]

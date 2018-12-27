@@ -1,5 +1,7 @@
 body {
   position: relative;
+  position: absolute;
+  z-index: 99;
   left: 1px;
   right: auto;
   display: block;
@@ -7,8 +9,26 @@ body {
   width: 2px;
   display: block;
   height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
-a {
-  position: absolute;
-  z-index: 99;
+body:before,
+body:after {
+  content: " ";
+  display: table;
+}
+body:after {
+  clear: both;
+}
+.mydiv:before,
+.mydiv:after {
+  content: " ";
+  display: table;
+}
+.mydiv:after {
+  clear: both;
 }

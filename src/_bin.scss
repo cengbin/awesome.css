@@ -13,6 +13,7 @@
 //基础样式：为网站的所有元素提供基本的样式
 
 //组件及其容器的样式
+@import "component-styles/buttons.scss";
 
 //结构化样式：包括组件节气容器的样式。例如创建网页的布局，并常用于定义尺寸
 @import "stractural-styles/grid.scss";

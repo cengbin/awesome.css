@@ -85,7 +85,7 @@ a.btn {
 .btn-default {
   @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
 }
-.btn-primary {
+/*.btn-primary {
   @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
 }
 // Success appears as green
@@ -103,4 +103,4 @@ a.btn {
 // Danger and error appear as red
 .btn-danger {
   @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
-}
+}*/

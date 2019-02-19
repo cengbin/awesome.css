@@ -1,6 +1,5 @@
 //清除浮动
-.clearfix,
-.row{
+.clearfix{
   @include clearfix();
 }
 

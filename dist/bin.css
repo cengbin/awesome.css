@@ -528,14 +528,11 @@ a.btn.disabled, fieldset[disabled] a.btn {
     max-width: 100%;
   }
 }
-.clearfix:before, .clearfix:after,
-.row:before,
-.row:after {
+.clearfix:before, .clearfix:after {
   content: " ";
   display: table;
 }
-.clearfix:after,
-.row:after {
+.clearfix:after {
   clear: both;
 }
 

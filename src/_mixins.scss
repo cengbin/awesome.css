@@ -1,13 +1,11 @@
 // Mixins
-@import "mixins/mixin.scss";
+@import "mixins/mixin";
 
-// Utilities
-@import "mixins/opacity.scss";
-@import "mixins/text-overflow.scss";
-@import "mixins/vendor-prefixes.scss";
+@import "mixins/buttons";
 
-// Layout
-@import "mixins/clearfix";
-@import "mixins/center-block";
 @import "mixins/grid";
 @import "mixins/grid-framework";
+
+@import "mixins/clearfix";
+@import "mixins/text-overflow";
+@import "mixins/center-block";

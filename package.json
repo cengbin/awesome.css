@@ -1,0 +1,11 @@
+{
+  "name": "web-css-library",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev":"sass src/_bin.scss:dist/bin.css",
+    "build":"sass src/_bin.scss:dist/bin.min.css --style compressed"
+  },
+  "author": "",
+  "license": "ISC"
+}

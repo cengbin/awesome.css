@@ -1,4 +1,3 @@
-//function way
 @function px2rem($px, $base-font-size: 100px) {
   @if (unitless($px)) {
     @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels for you";
@@ -9,6 +8,6 @@
   @return ($px / $base-font-size) * 1rem;
 }
 
-@function c($px) {
+@function r($px) {
   @return px2rem($px);
 }

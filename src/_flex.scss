@@ -1,0 +1,59 @@
+$grid-columns: 12;
+
+@mixin make-row() {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+@mixin make-col($size) {
+  $percent: percentage($size / $grid-columns);
+  flex: 0 0 $percent;
+  max-width: $percent;
+}
+
+@mixin make-grid-columns() {
+  %grid-column {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+  }
+
+
+  $infix: '';
+
+  @for $i from 1 through $grid-columns {
+    .col#{$infix}-#{$i} {
+      @extend %grid-column;
+    }
+  }
+
+  .col#{$infix},
+  .col#{$infix}-auto {
+    @extend %grid-column;
+  }
+
+  // Provide basic `.col-{bp}` classes for equal-width flexbox columns
+  .col#{$infix} {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+  .col#{$infix}-auto {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: none; // Reset earlier grid tiers
+  }
+
+  @for $i from 1 through $grid-columns {
+    .col#{$infix}-#{$i} {
+      @include make-col($i);
+    }
+  }
+}
+
+.flexbox {
+  @include make-row();
+}
+
+@include make-grid-columns();
